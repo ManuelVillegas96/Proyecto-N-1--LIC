@@ -1,4 +1,7 @@
-var errores new Array ();
+function impPregs()
+{
+	
+var errores = new Array ();
 '----Ingresamos los errores más comunes-----'
 errores[0] = "Mi impresora no imprime.";
 errores[1] = "Windows no puede encontrar el nuevo hardware.";
@@ -17,7 +20,7 @@ errores[13] = "La LED de la disquetera está encendida constantemente.";
 errores[14] = "No hay sonido en mi computadora.";
 errores[15] = "No puedo visualizar Google.";
 '---------------------------------------------'
-var soluciones new Array();
+var soluciones =new Array();
 '----Ingresamos las soluciones de acuerdo a los errores-----'
 soluciones[0] = ["Revisar que la impresora tenga suficiente tinta y papel","Verificar si están los correspondientes controladores de la impresora.","Comprobar que la cola de impresión se encuentra vacía.","Verificar que la impresora está conectada debidamente a la computadora."];
 soluciones[1] = ["Verificar que el software está correctamente instalado","Retira el dispositivo que tiene problemas y vuelvelo a conectar utilizando el asistente -Agregar Nuevo Hardware-","",""];
@@ -35,8 +38,8 @@ soluciones[12] = ["Anotar las claves Beep que da la BIOs, ya que según el fabri
 soluciones[13] = ["Revisar la conexión de la disquetera con la Motherboard.","Si lo anterior no funciona lo más recomendable es retirar y cambiar el cable de la disquetera.","",""];
 soluciones[14] = ["Revise que el cable del parlante esté conectado debidamente en su puerto.","Revisar si el problema es el cable y hacer u debido cambio.","Probar los parlantes en otra computadora y verificar si son estos el problema.",""];
 soluciones[15] = ["Posblemente sea causa de los secuestradores de navegadores, estos malware asumen el papel de navegador Web. se recomienda revisar los programas instalados y hacer un limpieza con el antivirus.","Si el problema persiste desinstala el navegador y utiliza el antivirus para eliminar el Malwarebytes que está alojado en tu computadora.","",""];
-'----------------------------------------------'
+/*'----------------------------------------------'
 'for (var i = 0; i >= errores.length ;  i++) {
 	document.write(errores(i));
-}'
-document.write(Holaaaaaa);
+}'*/
+}

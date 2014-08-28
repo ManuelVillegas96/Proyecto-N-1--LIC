@@ -1,3 +1,37 @@
-body {
+body 
+{
 	background-color: silver;
+}
+.menu li
+{
+	display: inline-block;
+	list-style: none;	
+	margin-left: -5px;
+	border-style: dotted;
+}
+a:link
+{
+	text-decoration: inherit;
+	text-decoration: none;
+	color: white;
+	border-style: solid;
+	height:  100px;
+	padding: 10px;
+	background-color: #6bab96;
+}
+a:hover
+{	
+	background-color: red;
+	font-size: 120%;
+	
+}
+a:visited
+{
+	text-decoration: none;
+	color: white;
+	border-color: rgb(0, 235, 235);
+}
+.actual a
+{
+	background-color: #3BDAA6;
 }
