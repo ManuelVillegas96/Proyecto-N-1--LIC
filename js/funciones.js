@@ -40,8 +40,8 @@ var pregs="";
 
 for (var i = 0; i <= errores.length-1 ;  i++) 
 {
-	pregs+="<div class='preguntas'><div class='pregunta'>Q: "+errores[i]+"</div>";
-	pregs+="<h3>Solucion</h3><div class='respuestaf'>"+soluciones[i]+"</div>";
+	pregs+="<div class='preguntas'><div class='pregunta' id='pregunta"+i+"'onclick='mostrarResp(resp"+i+")'>Q: "+errores[i]+"</div>";
+	pregs+="<div class='respuesta' id='resp"+i+"' style='display:none;'><h3>Solucion</h3>"+soluciones[i]+"</div>";
 	
 	pregs+="</div>";
 	if (i!=errores.length-1) 
@@ -51,3 +51,19 @@ for (var i = 0; i <= errores.length-1 ;  i++)
 }
 pregs+="";
 document.getElementById("preguntas").innerHTML=pregs;
+
+//BLOQUE PARA APARICION Y DESAPARICION
+
+function mostrarResp(elclickeado) {	
+
+     $('.respuesta').each(function(index) {    	
+     
+     	  if ($(this).attr("id") == elclickeado.id) {          		
+               $(this).show(200);
+          }
+          else {
+          	alert(elclickeado);
+               $(this).hide(300);
+          }
+     });
+}

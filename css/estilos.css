@@ -40,6 +40,10 @@ a:visited
 	background-color: #6bab96;
 	width: inherit;
 }
+.preguntas:hover
+{
+	cursor: pointer;
+}
 #preguntas
 {
 	max-width: 50%;
