@@ -1,8 +1,5 @@
-function impPregs()
-{
-	
 var errores = new Array ();
-'----Ingresamos los errores más comunes-----'
+//----Ingresamos los errores más comunes-----
 errores[0] = "Mi impresora no imprime.";
 errores[1] = "Windows no puede encontrar el nuevo hardware.";
 errores[2] = "La unidad de CD-ROM no lee mis discos.";
@@ -19,9 +16,9 @@ errores[12] = "Se escuchan pitidos Beep al encender la computadora.";
 errores[13] = "La LED de la disquetera está encendida constantemente.";
 errores[14] = "No hay sonido en mi computadora.";
 errores[15] = "No puedo visualizar Google.";
-'---------------------------------------------'
+
 var soluciones =new Array();
-'----Ingresamos las soluciones de acuerdo a los errores-----'
+//----Ingresamos las soluciones de acuerdo a los errores-----
 soluciones[0] = ["Revisar que la impresora tenga suficiente tinta y papel","Verificar si están los correspondientes controladores de la impresora.","Comprobar que la cola de impresión se encuentra vacía.","Verificar que la impresora está conectada debidamente a la computadora."];
 soluciones[1] = ["Verificar que el software está correctamente instalado","Retira el dispositivo que tiene problemas y vuelvelo a conectar utilizando el asistente -Agregar Nuevo Hardware-","",""];
 soluciones[2] = ["Verifica que la conexión entre la CD-ROM y la Motherboard está adecuadmente.","Desactiva el Administrador de los dispositivos del CD-ROM en : Panel de control/Administrador del sistema/ CD-ROM.","Revisa el cotrolador si está correctamente instalado.",""];
@@ -38,8 +35,19 @@ soluciones[12] = ["Anotar las claves Beep que da la BIOs, ya que según el fabri
 soluciones[13] = ["Revisar la conexión de la disquetera con la Motherboard.","Si lo anterior no funciona lo más recomendable es retirar y cambiar el cable de la disquetera.","",""];
 soluciones[14] = ["Revise que el cable del parlante esté conectado debidamente en su puerto.","Revisar si el problema es el cable y hacer u debido cambio.","Probar los parlantes en otra computadora y verificar si son estos el problema.",""];
 soluciones[15] = ["Posblemente sea causa de los secuestradores de navegadores, estos malware asumen el papel de navegador Web. se recomienda revisar los programas instalados y hacer un limpieza con el antivirus.","Si el problema persiste desinstala el navegador y utiliza el antivirus para eliminar el Malwarebytes que está alojado en tu computadora.","",""];
-/*'----------------------------------------------'
-'for (var i = 0; i >= errores.length ;  i++) {
-	document.write(errores(i));
-}'*/
+
+var pregs="";
+
+for (var i = 0; i <= errores.length-1 ;  i++) 
+{
+	pregs+="<div class='preguntas'><div class='pregunta'>Q: "+errores[i]+"</div>";
+	pregs+="<h3>Solucion</h3><div class='respuestaf'>"+soluciones[i]+"</div>";
+	
+	pregs+="</div>";
+	if (i!=errores.length-1) 
+	{
+		pregs+="<br>";
+	}
 }
+pregs+="";
+document.getElementById("preguntas").innerHTML=pregs;
