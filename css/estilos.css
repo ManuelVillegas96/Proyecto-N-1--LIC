@@ -24,7 +24,7 @@ section#seccion-contenido, header, footer {
 	width: 960px;
 	text-align: center;
 	border-radius: 0.5em;
-	padding: 1px;	
+	padding: 10px;	
 	margin: 0.3em auto;
 	background-color: #212121;
 	color: #5492a7;
@@ -51,7 +51,7 @@ aside#aside-index {
 footer#footer {
 	color: #b12b32;
 	height: 50px;
-	text-align: justify;
+	text-align: center;	
 	box-shadow: 0px 0px 100px rgba(0,0,0,0.5);
 }
 aside#aside-index {
@@ -83,8 +83,6 @@ article#descripcion-acerca{
 	border-color: #5492A7;
 	color: #CEF6D8;
 }
-
-
 
 #contact-form {
    color: black;
@@ -183,8 +181,7 @@ a:link
 a:hover
 {	
 	background-color: red;
-	font-size: 120%;
-	
+	font-size: 120%;	
 }
 a:visited
 {
@@ -198,8 +195,6 @@ a:visited
 }
 .preguntas
 {
-
-
 	width: inherit;
 }
 .preguntas:hover
@@ -215,20 +210,9 @@ section#auto1, section#auto2, section#auto3 {
 	min-height: 194px;
 	color: #CEF6D8;
 } 
-section#auto1, section article {
+section#auto1, section article, section#auto2, section article ,section#auto3, section article {
 	display: inline-block;
-	width: 45%;
-	vertical-align: top;
-}
-section#auto2, section article {
-	display: inline-block;
-	width: 45%;
-	vertical-align: top;
-	max-height: 217px;
-}
-section#auto3, section article {
-	display: inline-block;
-	width: 45%;
+	width: 40%;
 	vertical-align: top;
 }
 section#auto1 img, section#auto2 img, section#auto3 img{
@@ -237,3 +221,32 @@ section#auto1 img, section#auto2 img, section#auto3 img{
 	border-radius: 0.5em;
 	vertical-align: middle;
 } 
+#imgindex{max-width: 80%;margin-top: 20px; }
+
+@media screen and (max-width:960px){
+
+	article#descripcion-acerca{max-width: 60%;}
+	a:hover{background-color: red;font-size: 100%;}		
+	section#seccion-contenido, header, footer {max-width: 80%;}	
+	.menu li {margin-left: -5px;margin-top: 20px;}
+	section#auto1, section article {width: 70%;}
+	section#auto2, section article {width: 70%;}
+	section#auto3, section article {width: 70%;}
+	#imgindex{max-width: 70%;}
+
+
+#contact-form {width: 90%;}
+#contact-form #submit{width: 90%;}
+#contact-form input,#contact-form select,#contact-form textarea{width: 90%;}
+@media screen and (max-width:480px){
+	.menu li {margin-left: -5px;margin-top: 25px;}
+	section#seccion-contenido, header, footer {max-width: 80%;}
+	nav{background-color: #212121;margin-bottom: 30px;}	
+	section#seccion-contenido{margin-top: 90px;}
+}
+@media screen and (max-width:320px){
+	.menu li {margin-left: -5px;margin-top: 25px;}
+	section#seccion-contenido, header, footer {max-width: 80%;}
+	nav{background-color: #212121;margin-bottom: 130px;}	
+	section#seccion-contenido{margin-top: 230px;}	
+}
