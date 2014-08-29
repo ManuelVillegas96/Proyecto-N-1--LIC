@@ -224,7 +224,6 @@ section#auto1 img, section#auto2 img, section#auto3 img{
 #imgindex{max-width: 80%;margin-top: 20px; }
 
 @media screen and (max-width:960px){
-
 	article#descripcion-acerca{max-width: 60%;}
 	a:hover{background-color: red;font-size: 100%;}		
 	section#seccion-contenido, header, footer {max-width: 80%;}	
@@ -233,20 +232,21 @@ section#auto1 img, section#auto2 img, section#auto3 img{
 	section#auto2, section article {width: 70%;}
 	section#auto3, section article {width: 70%;}
 	#imgindex{max-width: 70%;}
-
-
-#contact-form {width: 90%;}
-#contact-form #submit{width: 90%;}
-#contact-form input,#contact-form select,#contact-form textarea{width: 90%;}
+	#contact-form {width: 90%;}
+	#contact-form #submit{width: 90%;}
+	#contact-form input,#contact-form select,#contact-form textarea{width: 90%;}
+}
 @media screen and (max-width:480px){
 	.menu li {margin-left: -5px;margin-top: 25px;}
 	section#seccion-contenido, header, footer {max-width: 80%;}
-	nav{background-color: #212121;margin-bottom: 30px;}	
-	section#seccion-contenido{margin-top: 90px;}
-}
-@media screen and (max-width:320px){
+	
+	section#seccion-contenido{margin-top: 90px;}	 
 	.menu li {margin-left: -5px;margin-top: 25px;}
-	section#seccion-contenido, header, footer {max-width: 80%;}
-	nav{background-color: #212121;margin-bottom: 130px;}	
-	section#seccion-contenido{margin-top: 230px;}	
+	
+	header{max-height: 250px;}
+	section#seccion-contenido,header,footer{background-color: #212121;border-radius: 0.5em;	}
+	section#seccion-contenido{margin-top: 0px;}	
+	#contact-form {width: 80%;margin-top: 0px;}
+	#contact-form #submit{width: 90%;}
+	#contact-form input,#contact-form select,#contact-form textarea{width: 90%;}
 }
