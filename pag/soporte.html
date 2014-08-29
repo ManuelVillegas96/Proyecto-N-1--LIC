@@ -2,25 +2,53 @@
 <html lang="es">
 <head>
 	<meta charset="utf-8"/>	
-	<title>-LIC Proyecto 1-</title>
+	<title>Base de Conocimiento</title>
 	<link rel="stylesheet" href="../css/estilos.css"/>
 	<script src="../js/jquery-1.11.1.js"></script>
 </head>
 <body>
 <header>
+<h1>Help Dexk</h1>
+	<nav>
 	<ul class="menu">
 	<li><a href="../index.html">Inicio</a></li>
-	<li><a href="../index.html">Inicio</a></li>
 	<li class="actual"><a href="">Soporte técnico</a></li>
-	<li><a href="problemas_frecuentes.html">Problemas mas frecuentes</a></li>
-	<li><a href="creadores.html">Creadores</a></li>
-	<li><a href="contactos.html">Contactos</a></li>	
+	<li ><a href="base.html">Base de Conocimiento</a></li>
+	<li><a href="frecuentes.html">Problemas mas frecuentes</a></li>
+	<li><a href="autores.html">Creadores</a></li>
+	<li><a href="">Contactos</a></li>	
 	</ul>
+	</nav>
 </header>
-<h1>Preguntas</h1>
-	<div  id="preguntas">
-		
-	</div>
+<section id="seccion-contenido">
+	<div id="contact-form"> 
+				   <h2>Usa el formulario para acercarnos tu error.</h2> 
+				   <p id="failure">Oops... Algo anduvo mal.</p> 
+				   <p id="success">Gracias, tu mensaje ha sido enviado correctamente.</p> 
+				   <form method="post"> 
+				      <label for="name">Nombre: <span class="required">*</span></label> 
+				      <input type="text" id="name" name="name" value="" placeholder="Tu nombre" required="required" autofocus="autofocus" /> 
+				         
+				      <label for="email">Dirección de Correo: <span class="required">*</span></label> 
+				      <input type="email" id="email" name="email" value="" placeholder="email@email.com" required="required" /> 
+				      <label for="subject">Tipo de error: </label> 
+				      <select id="subject" name="subject">   
+				         <option value="hello">Hardware</option>
+				         <option value="quote">Software</option> 
+				         <option value="general">No se...</option>   
+				      </select> 
+				         
+				      <label for="message">Explicación del error: <span class="required">*</span></label> 
+				      <textarea id="message" name="message" placeholder="Escriba su problema aquí, porfavor." required="required"></textarea> 
+				           
+				      <input type="submit" value="Enviar!" id="submit" />
+				   </form> 
+				</div>
+</section>
+
 </body>
-<footer><script src="../js/funciones.js"></script></footer>
+<footer id="footer">
+		<div id="piede">	&copy; 2014 HelpDesk ITR es un producto con todos los derechos reservados. ></div>
+		
+		</footer>
 </html>
