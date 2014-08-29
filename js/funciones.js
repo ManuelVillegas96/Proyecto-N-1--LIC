@@ -43,17 +43,23 @@ var pagina = self.location.href.match( /\/([^/]+)$/ )[1];
 if(pagina=="base.html") {
      for (var i = 0; i <= errores.length-1 ;  i++) 
      {
+          /*se agrega una division con la pregunta llamando a la funcion de mostrar con el parametro de el 
+          id de su respuesta correspondiente
+          y se agrega tambien el div con la respuesta pero no se despliega gracias al 
+          display:none;
+          */
           pregs+="<div class='preguntas'><div class='pregunta' id='pregunta"+i+"'onclick='mostrarResp(resp"+i+")'>Q: "+errores[i]+"</div>";
-          pregs+="<div class='respuesta' id='resp"+i+"' style='display:none;'><h3>Solucion</h3>"+soluciones[i]+"</div>";
-          
+          pregs+="<div class='respuesta' id='resp"+i+"' style='display:none;'><h3>Solucion</h3>"+soluciones[i]+"</div>";          
           pregs+="</div>";
           if (i!=errores.length-1) 
           {
+               //Se agrega una linea
                pregs+="<hr />";
           }
      }
 }
 else{
+     //Se agrega las preguntas mas frecuentes manualmente
      pregs+="<div class='preguntas'><div class='pregunta' id='pregunta"+1+"'onclick='mostrarResp(resp"+1+")'>Q: "+errores[1]+"</div>";
      pregs+="<div class='respuesta' id='resp"+1+"' style='display:none;'><h3>Solucion</h3>"+soluciones[1]+"</div></div><hr />";
 
@@ -84,18 +90,23 @@ else{
      pregs+="<div class='preguntas'><div class='pregunta' id='pregunta"+10+"'onclick='mostrarResp(resp"+10+")'>Q: "+errores[10]+"</div>";
      pregs+="<div class='respuesta' id='resp"+10+"' style='display:none;'><h3>Solucion</h3>"+soluciones[10]+"</div></div>";
 }
+//se agrega al div princpipal de las preguntas lo q este en la variable
+//y se imprime internamente sobre el div
 document.getElementById("preguntas").innerHTML=pregs;
 
-//BLOQUE PARA APARICION Y DESAPARICION
 
+//Funcion para mostrar solo una respuesta a la vez
 function mostrarResp(elclickeado) {	
-
+     //Se revisan todos los elementos con la clase "respuesta"
      $('.respuesta').each(function(index) {    	
-     
-     	  if ($(this).attr("id") == elclickeado.id) {          		
+               //Si el id es igual al q se ha dado clic
+     	  if ($(this).attr("id") == elclickeado.id) {
+            //Se usa jquery para modificar el display:none a q si sea visible y se le pone una velocidad
+            //de mostrado          		
                $(this).show(200);
           }
-          else {          	
+          else {         
+          //En cambio si no es el q se ha clickeado se esconde de la misma manera 	
                $(this).hide(300);
           }
      });
